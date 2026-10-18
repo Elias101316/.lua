@@ -35,11 +35,6 @@ title.TextSize = 20
 title.Font = Enum.Font.SourceSansBold
 title.Parent = frame
 
--- Liste für automatische Anordnung der Buttons
-local layout = Instance.new("UIListLayout")
-layout.Padding = UDim.new(0, 5)
-layout.SortOrder = Enum.SortOrder.LayoutOrder
-
 -- Container für Buttons
 local container = Instance.new("ScrollingFrame")
 container.Size = UDim2.new(1, -10, 1, -50)
@@ -49,6 +44,11 @@ container.CanvasSize = UDim2.new(0, 0, 0, 0)
 container.AutomaticCanvasSize = Enum.AutomaticCanvasSize.Y
 container.ScrollBarThickness = 4
 container.Parent = frame
+
+-- Liste für automatische Anordnung (Wird NACH dem Container gesetzt)
+local layout = Instance.new("UIListLayout")
+layout.Padding = UDim.new(0, 5)
+layout.SortOrder = Enum.SortOrder.LayoutOrder
 layout.Parent = container
 
 -- FUNKTION: Buttons einfach erstellen
